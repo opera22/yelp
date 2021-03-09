@@ -1,0 +1,18 @@
+.small-input {
+	width: 70px;
+}
+
+.get-all,
+.get-one,
+.del-one {
+	display: inline;
+	margin: 20px;
+}
+
+.long-input {
+	width: 200px;
+}
+
+.block {
+	display: block;
+}

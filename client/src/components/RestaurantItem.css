@@ -1,0 +1,28 @@
+.restaurant-item {
+	display: flex;
+	flex-direction: row;
+}
+
+.rest-id {
+	padding: 10px;
+	border: 1px solid black;
+	width: 100px;
+}
+
+.rest-name {
+	padding: 10px;
+	border: 1px solid black;
+	width: 200px;
+}
+
+.rest-loc {
+	padding: 10px;
+	border: 1px solid black;
+	width: 100px;
+}
+
+.rest-price-range {
+	padding: 10px;
+	border: 1px solid black;
+	width: 100px;
+}
