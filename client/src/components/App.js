@@ -64,24 +64,26 @@ const App = () => {
 	};
 
 	const addRestaurant = async (e) => {
-		const response = await client.post("", {
-			name: addRestaurantNameValue,
-			location: addRestaurantLocationValue,
-			price_range: addRestaurantPriceRangeValue,
-		});
-		getAllRestaurants();
+		console.log("Adding restaurant...");
+		console.log("Adding restaurant...");
+		try {
+			const response = await client.post("/", {
+				name: addRestaurantNameValue,
+				location: addRestaurantLocationValue,
+				price_range: addRestaurantPriceRangeValue,
+			});
+			getAllRestaurants();
+		} catch (err) {
+			console.log(err);
+		}
 	};
 
 	return (
 		<div className="app">
+			Opera22
 			{/* PUT ALL THE CONTROLS ABOVE THIS */}
 			{/* Get all button stays right above the list */}
-
-			<form
-				onSubmit={(e) => {
-					addRestaurant(e);
-				}}
-			>
+			<form>
 				<input
 					className="long-input block"
 					type="text"
@@ -109,7 +111,7 @@ const App = () => {
 						setAddRestaurantPriceRangeValue(e.target.value);
 					}}
 				/>
-				<button type="submit" className="block">
+				<button onClick={addRestaurant} className="block" type="submit">
 					Add Restaurant
 				</button>
 			</form>
